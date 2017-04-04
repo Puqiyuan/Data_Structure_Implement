@@ -54,6 +54,8 @@ int main(int argc, char *argv[])
 
   ElemType *e, a[5] = {'a', 'b', 'c', 'd', 'e'};
 
+  e = (ElemType*)malloc(1 * sizeof(ElemType));
+
   int i, j;
 
   printf("Test for Init_List function:\n");
