@@ -1,6 +1,44 @@
 /*
   this main function is for test all base operations.
+  test result:
+  pqy@sda1:~/.../linear_table$ ./a.out 
+  Test for Init_List function:
+  Before initialization: L.elem = 0x400f70, L.length = 4195808, L.list_size = 0
+  After initialization: L.elem = 0xddb420, L.length = 0, L.list_size = 10
+
+  The status code of initialization function: 1
+
+  Test for List_Traverse function:
+  a b c d e 
+
+  Test for List_Length function:
+  The length of the linear table is: 5
+
+  Test for Get_Elem function:
+  The third element: c 
+
+  Test for List_Insert function:
+  a b c f d e 
+
+  Test for List_Delete function:
+  a b f d e 
+
+  Test for Locate_Elem function, the test element is 'b': 
+  the index of first element equal b is: 2
+
+  Test for Next_Elem function, the test cur_e is 'b':
+  The successor of 'b' is: f
+
+  Test for Prior_Elem function, the test cur_e is 'b':
+  The prior of 'b' is: a
+
+  Test for Clear List function:
+  L.elem: 0xddb420, L.length: 0, L.list_size: 10
+
+  Test for Destroy List function:
+  L.elem: (nil), L.length: 0, L.list_size: 0
  */
+
 
 #include "../c1.h"
 typedef char ElemType;
@@ -13,6 +51,7 @@ typedef char ElemType;
 int main(int argc, char *argv[])
 {
   SqList L;
+
   ElemType *e, a[5] = {'a', 'b', 'c', 'd', 'e'};
 
   int i, j;
