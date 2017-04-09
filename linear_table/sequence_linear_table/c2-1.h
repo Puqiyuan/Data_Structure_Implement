@@ -1,5 +1,5 @@
 /*
-  this file define structure of linear table
+  this file define structure of linear table of sequence form.
  */
 
 #define LIST_INIT_SIZE 10 
