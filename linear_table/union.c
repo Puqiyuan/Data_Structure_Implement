@@ -1,4 +1,6 @@
 /*
+  test result:
+
   pqy@sda1:~/.../linear_table$ gcc union.c 
   pqy@sda1:~/.../linear_table$ ./a.out 
   2 34 45 78 32 77
@@ -53,6 +55,17 @@ int main(int argc, char *argv[])
 
   Union(&La, Lb);
 
+  printf("Before merge:\n");
+
+  printf("La:");
+  ListTraverse(La, vi_int);
+
+  printf("Lb:");
+  ListTraverse(Lb, vi_int);
+  
+  printf("After union:\n");
+
+  printf("La:");
   ListTraverse(La, vi_int);
   
   return 0;
