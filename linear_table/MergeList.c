@@ -1,5 +1,6 @@
 /*
   test result:
+
   pqy@sda1:~/.../linear_table$ ./a.out 
   Before merge:
   La:2 34 45 78 
@@ -93,7 +94,7 @@ int main(int argc, char *argv[])
   printf("Lb;");
   ListTraverse(Lb, vi_int);
 
-  printf("After merge:");
+  printf("After merge:\n");
 
   printf("Lc:");
   ListTraverse(Lc, vi_int);
