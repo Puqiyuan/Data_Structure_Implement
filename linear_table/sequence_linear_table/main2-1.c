@@ -1,5 +1,5 @@
 /*
-  this main function is for test all base operations.
+  this main function is for test all base operations of linear table of sequence form.
   test result:
   pqy@sda1:~/.../linear_table$ ./a.out 
   Test for Init_List function:
