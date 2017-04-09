@@ -39,13 +39,11 @@
   L.elem: (nil), L.length: 0, L.list_size: 0
  */
 
-
-#include "../c1.h"
 typedef char ElemType;
+#include "../../header/c1.h"
+#include "../../basic_operation/basic_op.c"
 #include "c2-1.h"
 #include "bo2-1.c"
-#include "vi.c"
-#include "compare.c"
 
 
 int main(int argc, char *argv[])

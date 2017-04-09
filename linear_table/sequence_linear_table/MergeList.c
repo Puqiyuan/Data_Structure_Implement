@@ -10,12 +10,11 @@
  */
 
 
-#include "../../c1.h"
 typedef int ElemType;
+#include "../../header/c1.h"
+#include "../../basic_operation/basic_op.c"
 #include "c2-1.h"
 #include "bo2-1.c"
-#include "../../basic_operation/vi_int.c"
-#include "../../basic_operation/compare.c"
 
 
 int MergeList(SqList La, SqList Lb, SqList *Lc)
