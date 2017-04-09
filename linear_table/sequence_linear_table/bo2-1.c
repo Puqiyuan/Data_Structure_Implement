@@ -1,5 +1,5 @@
 /*
-  this file define some base operations of linear table, such as insert, delete.
+  this file define some base operations of linear table of sequence form, such as insert, delete.
  */
 
 
