@@ -32,7 +32,11 @@ int main(int argc, char *argv[])
 
 	if ( (i = Max(T, m)) == OK )// Firstly compare then assigment.
 		cout<<"The maximum is: "<<m<<endl;
-	
+
+	if ( (i = Min(T, m)) == OK)
+		cout<<"The minimum is: "<<m<<endl;
+
+	DestroyTriplet(T); //Of course, a function does't have a returned value.
 	
 	return 0;
 }

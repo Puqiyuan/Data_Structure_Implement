@@ -60,7 +60,7 @@ Status IsAscending(Triplet T)
 Status IsDescending(Triplet T)
 {
 	// Inital conditions: The Triplet T existed already.
-	// Operation results: If three elements od T is descending, return 1, otherwise 0.
+	// Operation results: If three elements of T is descending, return 1, otherwise 0.
 
 	return (T[0] >= T[1] >= T[2]);
 }
@@ -68,7 +68,21 @@ Status IsDescending(Triplet T)
 
 Status Max(Triplet T, ElemType &e)
 {
+	// Inital conditions: The Triplet T existed already.
+	// Operation results: Returning the maximum of three values in T.
+	
 	e = T[0] >= T[1]? T[0] >= T[2]? T[0]: T[2]: T[1] >= T[2]? T[1]:T[2];
+
+	return OK;
+}
+
+
+Status Min(Triplet T, ElemType &e)
+{
+	// Inital conditions: The Triplet T existed already.
+	// Operation results: Returning the minimum of three values in T.
+
+	e = T[0] <= T[1]? T[0] <= T[2]? T[0]:T[2]:T[1]<=T[2]?T[1]:T[2];
 
 	return OK;
 }
