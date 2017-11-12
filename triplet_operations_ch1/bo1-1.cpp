@@ -55,3 +55,12 @@ Status IsAscending(Triplet T)
 
 	return (T[0] <= T[1] && T[1] <= T[2]);
 }
+
+
+Status IsDescending(Triplet T)
+{
+	// Inital conditions: The Triplet T existed already.
+	// Operation results: If three elements od T is descending, return 1, otherwise 0.
+
+	return (T[0] >= T[1] >= T[2]);
+}

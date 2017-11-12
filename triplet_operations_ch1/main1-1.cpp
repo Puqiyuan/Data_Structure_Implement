@@ -25,7 +25,10 @@ int main(int argc, char *argv[])
 
 	i = IsAscending(T);
 
-	printf("After call IsAscending function, i = %d(0: is 1: no)\n", i);
+	printf("After call IsAscending function, i = %d(0: is, 1: no)\n", i);
+
+	i = IsDescending(T);
+	printf("After call IsDescending function, i = %d(0: is, 1: no)\n", i);
 	
 	return 0;
 }
