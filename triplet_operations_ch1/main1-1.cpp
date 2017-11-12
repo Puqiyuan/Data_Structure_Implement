@@ -29,6 +29,10 @@ int main(int argc, char *argv[])
 
 	i = IsDescending(T);
 	printf("After call IsDescending function, i = %d(0: is, 1: no)\n", i);
+
+	if ( (i = Max(T, m)) == OK )// Firstly compare then assigment.
+		cout<<"The maximum is: "<<m<<endl;
+	
 	
 	return 0;
 }
