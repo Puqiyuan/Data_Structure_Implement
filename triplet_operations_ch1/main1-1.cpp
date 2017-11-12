@@ -1,3 +1,19 @@
+/*
+  Test result:
+  ~/.../triplet_operations_ch1$ g++ main1-1.cpp 
+  ~/.../triplet_operations_ch1$ ./a.out 
+  After call InitalTriplet function, i = 1(1: success). The three values of T: 
+  5 7 9
+  the second value: 7
+  The three elements after change the second value of T to 6: 
+  5 6 9
+  After call IsAscending function, i = 1(0: is, 1: no)
+  After call IsDescending function, i = 0(0: is, 1: no)
+  The maximum is: 9
+  The minimum is: 5
+ */
+
+
 // Filename: main1-1.cpp. Test the basic operations in bo1-1.cpp.
 #include "bigHeader.h"
 typedef int ElemType; // Abstract data type is defined as int type in this test program.
