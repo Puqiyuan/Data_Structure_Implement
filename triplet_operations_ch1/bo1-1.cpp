@@ -33,3 +33,25 @@ Status Get(Triplet T, int i, ElemType &e)
 
 	return OK;
 }
+
+
+Status Put(Triplet T, int i, ElemType e)
+{
+	// Inital conditions: The Triplet T existed already.
+	// Operation results: Change the i'th element to e.
+	if (i < 1 || i > 3)
+		return ERROR;
+
+	T [i - 1] = e;
+
+	return OK;
+}
+
+
+Status IsAscending(Triplet T)
+{
+	// Initial conditions: The Triplet T esixted already.
+	// Operation results: If three elements of T is ascending, return 1, otherwise 0.
+
+	return (T[0] <= T[1] && T[1] <= T[2]);
+}

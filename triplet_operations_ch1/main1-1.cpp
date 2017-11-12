@@ -14,10 +14,18 @@ int main(int argc, char *argv[])
 	i = InitTriplet(T, 5, 7, 9);
 	printf("After call InitalTriplet function, i = %d(1: success). The three values of T: \n", i);
 	cout<<T[0]<<' '<<T[1]<<' '<<T[2]<<endl;
-	//for avoiding the impact of changes of type, using cout() function instead of printf(), notice the end is endl.
+	//For avoiding the impact of changes of type, using cout() function instead of printf(), notice the end is endl.
 
 	i = Get(T, 2, m);
-	cout<<"the second value: "<<m<<endl;
+	if (i == OK)
+		cout<<"the second value: "<<m<<endl;
+
+	i = Put(T, 2, 6);
+	cout<<"The three elements after change the second value of T to 6: \n"<<T[0]<<' '<<T[1]<<' '<<T[2]<<endl;
+
+	i = IsAscending(T);
+
+	printf("After call IsAscending function, i = %d(0: is 1: no)\n", i);
 	
 	return 0;
 }
