@@ -13,12 +13,11 @@ int main(int argc, char *argv[])
 
 	i = InitTriplet(T, 5, 7, 9);
 	printf("After call InitalTriplet function, i = %d(1: success). The three values of T: \n", i);
-	std::cout << T[0];
-	std:: cout << ' ';
-	std::cout << T[1];
-	std::cout << ' ';
-	std::cout << T[2];
-	printf("\n");
+	cout<<T[0]<<' '<<T[1]<<' '<<T[2]<<endl;
+	//for avoiding the impact of changes of type, using cout() function instead of printf(), notice the end is endl.
+
+	i = Get(T, 2, m);
+	cout<<"the second value: "<<m<<endl;
 	
 	return 0;
 }
