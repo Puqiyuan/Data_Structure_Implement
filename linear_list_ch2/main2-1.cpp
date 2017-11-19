@@ -42,6 +42,17 @@ int main(int argc, char *argv[])
 	int j, k;
 	i = InitList(L);
 	printf("After initialization: L.elem = %u L.length = %d L.listsize = %d\n", L.elem, L.length, L.listsize);
+
+	for (j = 1; j <= 5; j++)
+		i = ListInsert(L, 1, j);
+
+	printf("After insert 1 ~ 5: *L.elem = ");
+
+	for (j = 1; j <= 5; j++)
+		cout<<*(L.elem + j - 2)<<' ';
+	cout<<endl;
+
+	printf("L.elem = %u L.length = %d L.listsize = %d\n", L.elem, L.length, L.listsize);
 	
 	
 	return 0;
