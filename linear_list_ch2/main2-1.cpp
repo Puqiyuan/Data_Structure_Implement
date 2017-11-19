@@ -53,7 +53,8 @@ int main(int argc, char *argv[])
 	cout<<endl;
 
 	printf("L.elem = %u L.length = %d L.listsize = %d\n", L.elem, L.length, L.listsize);
-	
+
+		
 	
 	return 0;
 }
