@@ -54,7 +54,9 @@ int main(int argc, char *argv[])
 
 	printf("L.elem = %u L.length = %d L.listsize = %d\n", L.elem, L.length, L.listsize);
 
-		
+	i = ListEmpty(L);
+
+	cout<<"Is L empty? i = "<<i<<"(1:yes 0: no)"<<endl; //note that you defined the return value of function is Status, although it's int type, but you cannot output it by %d formate useing printf function.
 	
 	return 0;
 }

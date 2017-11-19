@@ -46,8 +46,7 @@ Status ListEmpty(SqList L)
 	if (L.length == 0)
 		return TRUE;
 
-	else
-		return FALSE;
+	return FALSE;
 }
 
 
