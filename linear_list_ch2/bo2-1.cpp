@@ -102,3 +102,27 @@ Status ListInsert(SqList &L, int i, ElemType e)
 
 	return OK;
 }
+
+
+Status ListDelete(SqList &L, int i, ElemType &e)
+{
+	// Initall condition: The serial linear list existed alreay, i <= i <= ListLength(L)
+	// Operation result: Delete the i'th element of L, and return its value by e, the length of L decrease by 1.
+
+	ElemType *p, *q;
+
+	if (i < 1 || i > L.length) // the value of i is invalid.
+		return ERROR;
+
+	p = L.elem + i - 1; // p is the location of deleted element.
+	e = *p; // assign the deleted element to e.
+	q = L.elem + L.length - 1; // the tail of L.
+	for (++p; p <= q; ++p) // shift all elements that after deleted to forward.
+		*(p - 1) = *p;
+
+	L.length--; // the length of L should decrease by 1.
+
+	return OK;
+}
+
+
