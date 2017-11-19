@@ -65,7 +65,29 @@ int main(int argc, char *argv[])
 	i = ListEmpty(L);
 
 	cout<<"Is L empty? i = "<<i<<"(1:yes 0:no)"<<endl;
+
+	for (j = 1; j <= 10; j++)
+		ListInsert(L, j, j);
+	printf("After inserted 1 ~ 10 at tail of L: *L.elem=");
+
+	for (j = 1; j <= 10; j++)
+		cout<<*(L.elem + j - 1)<<' ';
+	cout<<endl;
+
+	printf("L.elem = %u L.length = %d L.listsize = %d\n", L.elem, L.length, L.listsize);
+
+	ListInsert(L, 1, 0);
+
+	printf("Insert 0 at head of L: *L.elem=");
+	for (j = 1; j <= ListLength(L); j++)// ListLength(L) is the number of L.
+		cout<<*(L.elem + j - 1)<<' ';
+	cout<<endl;
+
+	printf("L.elem = %u(maybe changed) L.length=%d(changed) L.listsize=%d(changed)\n", L.elem, L.length, L.listsize);
+
+	GetElem(L, 5, e);
+
+	printf("The 5'th of L is: %d\n", e);
 	
 	return 0;
 }
-

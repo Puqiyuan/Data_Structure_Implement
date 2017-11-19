@@ -125,4 +125,21 @@ Status ListDelete(SqList &L, int i, ElemType &e)
 	return OK;
 }
 
+int LocateElem(SqList L, ElemType e, Status(*compare)(ElemType, ElemType))
+{
+	// Initally condition: The serial linear list L is existed already. compare() is the function used for data judge, content 1, otherwise 0.
+	// Operation result: return the location of element that the first one satisfy the relationship of compare function. If there is no such element, return 0.
 
+	ElemType *p;
+
+	int i = 1; // the initial value of i is the first element.
+	p = L.elem; // the initial value of p is the location of the first element.
+
+	while (i <= L.length && !compare(*p++, e))
+		++i;
+
+	if (i <= L.length)
+		return i;
+	
+	return 0;
+}
