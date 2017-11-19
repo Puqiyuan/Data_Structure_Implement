@@ -88,6 +88,18 @@ int main(int argc, char *argv[])
 	GetElem(L, 5, e);
 
 	printf("The 5'th of L is: %d\n", e);
+
+	for (j = 3; j <= 4; j++)
+		{
+			k = LocateElem(L, j, comp);
+			if (k)
+				printf("The %d'th element is the square of %d.\n", k, j);
+			
+			else
+				printf("No value is the square of %d.\n", j);
+		}
+	GetElem(L, 10, e);
+	printf("The value of 10'th element is: %d\n", e);
 	
 	return 0;
 }
