@@ -8,4 +8,4 @@ struct SqList
 	ElemType *elem; // the base address of space.
 	int length; // current length of linear list.
 	int listsize; // current malloced space(in sizeof(ElemType))
-}
+};
