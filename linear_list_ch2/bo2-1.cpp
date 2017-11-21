@@ -168,3 +168,28 @@ Status PriorElem(SqList L, ElemType cur_e, ElemType &pre_e)
 			return OK;
 		}
 }
+
+
+Status NextElem(SqList L, ElemType cur_e, ElemType &next_e)
+{
+	// Initally condition: The serial linear list exited already.
+	// Operation result: If cur_e is belongs to L and is't the last one, reutrn its successor by next_e, otherwise failed to operation.
+
+	int i = 1;
+	ElemType *p = L.elem;
+
+	while (i < L.length && *p != cur_e)
+		{
+			i++;
+			p++;
+		}
+
+	if (i == L.length)
+		return INFEASIBLE;
+
+	else
+		{
+			next_e = *++p;
+			return OK;
+		}
+}

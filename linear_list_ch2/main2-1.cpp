@@ -113,6 +113,18 @@ int main(int argc, char *argv[])
 				printf("The precursor of %d is: %d.\n", e0, e);
 				
 		}
+
+	for (j = ListLength(L) - 1; j <= ListLength(L); j++)
+		{
+			GetElem(L, j, e0);
+			i = NextElem(L, e0, e);
+
+			if (i == INFEASIBLE)
+				printf("There is no successor for %d.\n", e0);
+
+			else
+				printf("The successor of %d is: %d.\n", e0, e);
+		}
 	
 	return 0;
 }
