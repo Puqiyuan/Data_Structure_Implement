@@ -125,6 +125,17 @@ int main(int argc, char *argv[])
 			else
 				printf("The successor of %d is: %d.\n", e0, e);
 		}
+
+	k = ListLength(L); // k is the length of L.
+	for (j = k + 1; j >= k; j--)
+		{
+			i = ListDelete(L, j, e);
+			if (i == ERROR)
+				printf("Failed to delete %d'th element.\n", j);
+
+			else
+				printf("The value of deleted: %d.\n", e);
+		}
 	
 	return 0;
 }
