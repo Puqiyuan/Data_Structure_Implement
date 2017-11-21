@@ -16,12 +16,10 @@ Status comp(ElemType c1, ElemType c2)
 }
 
 
-int visit(ElemType &c)
+void visit(ElemType &c)
 {
 	// Called by ListTraverse() function to output the value of c.
 	cout<<c<<' ';
-
-	return 0;
 }
 
 
@@ -136,6 +134,12 @@ int main(int argc, char *argv[])
 			else
 				printf("The value of deleted: %d.\n", e);
 		}
+
+	printf("Output all elements of L:\n");
+	
+	ListTraverse(L, visit);
+
+	
 	
 	return 0;
 }

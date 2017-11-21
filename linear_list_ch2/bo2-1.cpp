@@ -193,3 +193,21 @@ Status NextElem(SqList L, ElemType cur_e, ElemType &next_e)
 			return OK;
 		}
 }
+
+
+Status ListTraverse(SqList L, void(*vi)(ElemType &))
+{
+	// Initally condition: Ther serial list exited already.
+	// Operation result: For each element in L calling vi() function, once failed to call, operation failed.
+
+	ElemType *p;
+	int i;
+
+	p = L.elem;
+	for (i = 1; i <= L.length; i++)
+		vi(*p++);
+	cout<<endl;
+
+	return OK;
+	
+}
