@@ -142,6 +142,12 @@ int main(int argc, char *argv[])
 	
 	printf("After dboule:\n");
 	ListTraverse(L, visit);
+
+	printf("Before destroy L: L.elem=%u L.lenth=%d L.listsize=%d\n", L.elem, L.length, L.listsize);
 	
+	DestroyList(L);
+	
+	printf("After destroy L: L.elem=%u L.lenth=%d L.listsize=%d\n", L.elem, L.length, L.listsize);
+		
 	return 0;
 }
