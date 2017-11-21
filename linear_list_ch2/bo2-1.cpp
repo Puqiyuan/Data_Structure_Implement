@@ -143,3 +143,28 @@ int LocateElem(SqList L, ElemType e, Status(*compare)(ElemType, ElemType))
 	
 	return 0;
 }
+
+
+Status PriorElem(SqList L, ElemType cur_e, ElemType &pre_e)
+{
+	// Initally condition: Ther serial linear list existed already.
+	// Operation result: If cur_e is belongs to L and is't the first one, return its precursor by pre_e, otherwise failed to operation and pre_e no defined.
+
+	int i = 2;
+	ElemType *p = L.elem + 1;
+	
+	while(i <= L.length && *p != cur_e)
+		{
+			p++;
+			i++;
+		}
+
+	if (i > L.length)
+		return INFEASIBLE;
+
+	else
+		{
+			pre_e = *--p;
+			return OK;
+		}
+}

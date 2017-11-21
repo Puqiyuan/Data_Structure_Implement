@@ -100,6 +100,19 @@ int main(int argc, char *argv[])
 		}
 	GetElem(L, 10, e);
 	printf("The value of 10'th element is: %d\n", e);
+
+	for (j = 1; j <= 2; j++) // test the first and second elements.
+		{
+			GetElem(L, j, e0); // assign the j'th element to e0.
+
+			i = PriorElem(L, e0, e);
+			if (i == INFEASIBLE)
+				printf("There is no precursor for %d.\n", e0);
+
+			else
+				printf("The precursor of %d is: %d.\n", e0, e);
+				
+		}
 	
 	return 0;
 }
