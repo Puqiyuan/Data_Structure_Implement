@@ -23,12 +23,11 @@ void visit(ElemType &c)
 }
 
 
-int dbl(ElemType &c)
+void dbl(ElemType &c)
 {
 	// Called by ListTraverse() function double the value of c.
 	c *= 2;
 
-	return 0;
 }
 
 int main(int argc, char *argv[])
@@ -138,8 +137,11 @@ int main(int argc, char *argv[])
 	printf("Output all elements of L:\n");
 	
 	ListTraverse(L, visit);
-
+ 
+	ListTraverse(L, dbl); // Calling dbl() function for each element in L.
 	
+	printf("After dboule:\n");
+	ListTraverse(L, visit);
 	
 	return 0;
 }
