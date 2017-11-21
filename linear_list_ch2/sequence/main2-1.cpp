@@ -1,5 +1,5 @@
 // main2-1.cpp test the basic functions in bo2-1.cpp
-#include "bigHeader.h"
+#include "/home/pqy7172/Data_Structure_Implement/header/bigHeader.h"
 typedef int ElemType;
 #include "c2-1.h"
 #include "bo2-1.cpp"

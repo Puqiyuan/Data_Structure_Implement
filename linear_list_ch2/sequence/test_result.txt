@@ -1,0 +1,27 @@
+After initialization: L.elem = 3293973536 L.length = 0 L.listsize = 10
+After insert 1 ~ 5: *L.elem = 0 5 4 3 2 
+L.elem = 3293973536 L.length = 5 L.listsize = 10
+Is L empty? i = 0(1:yes 0:no)
+After clear L: L.elem = 3293973536 L.length = 0 L.listsize = 10
+Is L empty? i = 1(1:yes 0:no)
+After inserted 1 ~ 10 at tail of L: *L.elem=1 2 3 4 5 6 7 8 9 10 
+L.elem = 3293973536 L.length = 10 L.listsize = 10
+Insert 0 at head of L: *L.elem=0 1 2 3 4 5 6 7 8 9 10 
+L.elem = 3293977696(maybe changed) L.length=11(changed) L.listsize=12(changed)
+The 5'th of L is: 4
+The 10'th element is the square of 3.
+No value is the square of 4.
+The value of 10'th element is: 9
+There is no precursor for 0.
+The precursor of 1 is: 0.
+The successor of 9 is: 10.
+There is no successor for 10.
+Failed to delete 12'th element.
+The value of deleted: 10.
+Output all elements of L:
+0 1 2 3 4 5 6 7 8 9 
+
+After dboule:
+0 2 4 6 8 10 12 14 16 18 
+Before destroy L: L.elem=3293977696 L.lenth=10 L.listsize=12
+After destroy L: L.elem=0 L.lenth=0 L.listsize=0
