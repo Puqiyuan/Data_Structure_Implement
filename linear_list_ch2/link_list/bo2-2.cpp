@@ -121,3 +121,22 @@ Status ListEmpty(LinkList L)
 	else
 		return TRUE;
 }
+
+
+Status ClearList(LinkList L) //don't need to change L
+{
+	// Initally condition: linear list L existed already.
+	// Operation result: Set L to null.
+
+	LinkList p, q;
+	p = L -> next;
+	while(p)
+		{
+			q = p -> next;
+			free(p);
+			p = q;
+		}
+
+	L -> next = NULL; // the domain of pointer of head node is null.
+	return OK;
+}
