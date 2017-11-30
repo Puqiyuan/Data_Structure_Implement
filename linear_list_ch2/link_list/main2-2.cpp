@@ -46,9 +46,23 @@ int main(int argc, char *argv[])
 	i = ListEmpty(L);
 	printf("Is L null? i = %d(1: yes 0: no)\n", i);
 
+	for (j = 1; j <= 10; j++)
+		ListInsert(L, j,  j);
+	printf("After insert 1 ~ 10 at end of L: L = ");
+	ListTraverse(L, visit);
+
 	GetElem(L, 5, e);
 	printf("The 5'th element is: %d\n", e);
+
+	for (j = 0; j <= 1; j++)
+		{
+			k = LocateElem(L, j, comp);
+
+			if (k)
+				printf("The value of %d'th is %d.\n",  k,  j);
+			else
+				printf("There is no element its value is %d.\n", j);
+		}
 	
-		
 	return 0;
 }
