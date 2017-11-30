@@ -36,10 +36,13 @@ int main(int argc, char *argv[])
 		i = ListInsert(L, 1,  j);
 	
 	printf("After insert 1 ~ 5 at head of L: L = ");
-	ListTraverse(L, visit);
+	ListTraverse(L, visit); // Calling visit() by order, output elements value.
+	i = ListEmpty(L);
+	printf("Is L null?: i =  %d(1: yes 0: no)\n", i);
 
 	GetElem(L, 5, e);
 	printf("The 5'th element is: %d\n", e);
+	
 		
 	return 0;
 }

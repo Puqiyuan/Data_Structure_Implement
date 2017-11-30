@@ -91,3 +91,33 @@ Status GetElem(LinkList L, int i, ElemType &e)
 	e = p -> data; // get the i'th element.
 	return OK;
 }
+
+
+int LocateElem(LinkList L, ElemType e, Status(*compare)(ElemType, ElemType))
+{
+	// Initally condition: linear list L existed, compare() is the function used for judge element, 1 if satisfy, 0 otherewise.
+	// Operation result: Producing the order of element in L which is the first one satisfy compare() function with e, return 0 if there is no such element.
+	int i = 0;
+	LinkList p = L -> next;
+	while(p)
+		{
+			i++;
+			if (compare(p -> data, e))
+				return i;
+
+			p = p -> next;
+		}
+
+	return 0;
+}
+
+
+Status ListEmpty(LinkList L)
+{
+	// Initially condition: linear list L existed already.
+	// Operation result: return TRUE, if L is empty, FALSE otherwise.
+	if (L -> next) // nonull
+		return FALSE;
+	else
+		return TRUE;
+}
