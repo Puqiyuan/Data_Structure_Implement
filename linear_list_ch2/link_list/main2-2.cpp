@@ -37,6 +37,9 @@ int main(int argc, char *argv[])
 	
 	printf("After insert 1 ~ 5 at head of L: L = ");
 	ListTraverse(L, visit);
+
+	GetElem(L, 5, e);
+	printf("The 5'th element is: %d\n", e);
 		
 	return 0;
 }

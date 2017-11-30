@@ -71,3 +71,23 @@ Status ListTraverse(LinkList L, void(*vi) (ElemType))
 
 	return OK;		
 }
+
+
+Status GetElem(LinkList L, int i, ElemType &e)
+{
+	// L is the link list with head node. Assign its value to e when i'th element existed and return OK, otherwise ERROR.
+	int j = 1; // j is a counter.
+	LinkList p = L -> next; // p point to the first node.
+	
+	while (p && j < i) // seek afterward, until p is pointing to i'th element or null.
+		{
+			p = p -> next;
+			j++;
+		}
+
+	if (!p || j > i) // there is't i'th element.
+		return ERROR;
+
+	e = p -> data; // get the i'th element.
+	return OK;
+}
