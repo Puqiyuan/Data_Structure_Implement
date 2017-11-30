@@ -140,3 +140,24 @@ Status ClearList(LinkList L) //don't need to change L
 	L -> next = NULL; // the domain of pointer of head node is null.
 	return OK;
 }
+
+
+Status PriorElem(LinkList L, ElemType cur_e, ElemType &pre_e)
+{
+	// Initially condition: linear list existed.
+	// Operation result: given cur_e is belong to L and is't the first element, return its precursor by pre_e, return OK, failed otherwise, no defined for pre_e, return INFEASIBLE.
+
+	LinkList q, p = L -> next;
+	while (p -> next)
+		{
+			q = p -> next;
+			if (q -> data == cur_e)
+				{
+					pre_e = p -> data;
+					return OK;
+				}
+			p = q;
+		}
+
+	return INFEASIBLE;
+}

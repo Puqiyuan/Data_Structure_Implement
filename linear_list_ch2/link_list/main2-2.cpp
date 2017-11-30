@@ -59,10 +59,22 @@ int main(int argc, char *argv[])
 			k = LocateElem(L, j, comp);
 
 			if (k)
-				printf("The value of %d'th is %d.\n",  k,  j);
+				printf("The value of %d'th element is %d.\n",  k,  j);
 			else
 				printf("There is no element its value is %d.\n", j);
 		}
 	
+	for (j = 1; j <= 2; j++) // test the first two elements
+		{
+			GetElem(L, j, e0);
+			
+			i = PriorElem(L, e0, e);
+			
+			if (i == INFEASIBLE)
+				printf("There is no precursor for %d.\n", e0);
+			else
+				printf("The precursor of %d is: %d.\n", e0, e);
+		}
+
 	return 0;
 }
