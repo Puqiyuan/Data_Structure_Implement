@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 
 	i = ListEmpty(L);
 
-	cout<<"Is L empty? i = "<<i<<"(1:yes 0:no)"<<endl; //note that you defined the return value of function is Status, although it's int type, but you cannot output it by %d formate useing printf function.j
+	cout<<"Is L empty? i = "<<i<<"(1:yes 0:no)"<<endl; //note that you defined the return value of function is Status, although it's int type, but you cannot output it by %d formate useing printf function.
 
 	i = ClearList(L);
 
