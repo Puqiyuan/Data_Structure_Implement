@@ -33,7 +33,10 @@ int main(int argc, char *argv[])
 	printf("After execute InitList() function(0: failed, 1: success): %d\n ",  i);
 
 	for (j = 1; j <= 5; j++)
+		i = ListInsert(L, 1,  j);
 	
+	printf("After insert 1 ~ 5 at head of L: L = ");
+	ListTraverse(L, visit);
+		
 	return 0;
 }
-

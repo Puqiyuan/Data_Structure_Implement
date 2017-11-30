@@ -52,3 +52,22 @@ Status ListInsert(LinkList L, int i, ElemType e)
 	
 	return OK;
 }
+
+
+Status ListTraverse(LinkList L, void(*vi) (ElemType))
+{
+	//  the parametric of this function is ELemType that is different from ElemType& in bo2-1.cpp.
+	// Initally condition: the linear list existed alredy.
+	// Operation result: Calling vi() function for each element in L, operation failed once vi() is failed.
+
+	LinkList p = L -> next;
+	while(p)
+		{
+			vi(p -> data);
+			p = p -> next;
+		}
+
+	printf("\n");
+
+	return OK;		
+}
