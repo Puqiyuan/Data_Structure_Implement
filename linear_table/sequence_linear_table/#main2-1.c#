@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
   printf("Test for Next_Elem function, the test cur_e is 'b':\n");
   NextElem(L, *e, &next_e);
   printf("The successor of 'b' is: %c\n", next_e);
-
+  
   char pre_e;
   pre_e = 'a';
   printf("\n");
