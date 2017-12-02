@@ -161,3 +161,24 @@ Status PriorElem(LinkList L, ElemType cur_e, ElemType &pre_e)
 
 	return INFEASIBLE;
 }
+
+
+Status NextElem(LinkList L,  ElemType cur_e, ElemType &next_e)
+{
+	// Initally condtion: linear list existed.
+	// Operation result: if cur_e is belong to L and is't the last one, return its successor by next_e, return OK, failed otherwise, no defie for next_e, return INFEASIBLE.
+
+	LinkList p = L -> next; // p pointer to the first node.
+	whie (p -> next) // there is a successor for p
+		{
+			if (p -> data == cur_e)
+				{
+					next_e = p -> next -> data;
+					return OK;
+				}
+
+			p = p -> next;
+		}
+	
+	return INFEASIBLE;
+}
