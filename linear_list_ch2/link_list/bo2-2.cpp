@@ -169,7 +169,7 @@ Status NextElem(LinkList L,  ElemType cur_e, ElemType &next_e)
 	// Operation result: if cur_e is belong to L and is't the last one, return its successor by next_e, return OK, failed otherwise, no defie for next_e, return INFEASIBLE.
 
 	LinkList p = L -> next; // p pointer to the first node.
-	whie (p -> next) // there is a successor for p
+	while (p -> next) // there is a successor for p
 		{
 			if (p -> data == cur_e)
 				{
@@ -181,4 +181,22 @@ Status NextElem(LinkList L,  ElemType cur_e, ElemType &next_e)
 		}
 	
 	return INFEASIBLE;
+}
+
+
+int ListLength(LinkList L)
+{
+	//  Initally condition: linear list existed already.
+	// Operarion result: return the number of element in L.
+
+	int i = 0;
+	LinkList p = L -> next;
+	
+	while (p)
+		{
+			i++;
+			p = p -> next;
+		}
+
+	return i;
 }
