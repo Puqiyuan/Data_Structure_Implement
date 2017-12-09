@@ -88,5 +88,22 @@ int main(int argc, char *argv[])
 				printf("The successor of %d is %d.\n", e0, e);
 		}
 
+	k = ListLength(L); // k is the length of list.
+	printf("Before delete the last element:\n");
+	ListTraverse(L, visit);
+	
+	for (j = k + 1; j >= k; j--)
+		{
+			i = ListDelete(L, j, e); // delete the i'th element.
+
+			if (i == ERROR)
+				printf("Failed to delete the %d'th element.\n", j);
+			else
+				printf("The element have deleted: %d.\n", e);
+		}
+
+	printf("After delete an element:\n");
+	ListTraverse(L, visit);
+
 	return 0;
 }

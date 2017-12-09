@@ -200,3 +200,27 @@ int ListLength(LinkList L)
 
 	return i;
 }
+
+
+Status ListDelete(LinkList L, int i, ElemType &e)
+{
+	// algo 2.10, does not change L
+	// delete the i'th element in the link list with head and return deleted value by e.
+	int j = 0;
+	LinkList p = L, q;
+	while (p -> next && j < i - 1) // find the i'th element and pointer its precursor by p.
+		{
+			p = p -> next;
+			j++;
+		}
+
+	if (! p -> next || j > i - 1)
+		return ERROR;
+
+	q = p -> next;
+	p -> next = q -> next;
+	e = q -> data;
+	free(q);
+
+	return OK;
+}
