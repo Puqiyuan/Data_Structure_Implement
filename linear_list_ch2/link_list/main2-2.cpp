@@ -105,5 +105,8 @@ int main(int argc, char *argv[])
 	printf("After delete an element:\n");
 	ListTraverse(L, visit);
 
+	DestroyList(L);
+	printf("After destroy L: L = %u.\n", L);
+	
 	return 0;
 }
